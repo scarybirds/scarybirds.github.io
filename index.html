@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="utf-8" />
+    <title>Go away ugly birds!</title>
+    <link rel="stylesheet" href="src/style.css" 
+    <meta name="description" content="go away ugly birds">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<body>
+    <main>
+        <section class="buttonWrapper">
+            <button type="button" id="actionButton" class="buttonAction">
+                <span class="buttonBase"></span>
+            </button>
+        </section>
+
+        <section class="controlsWrapper">
+            <label>Repeat sound:
+                <select id="timeControl">
+                    <option value="0" selected>never</option>
+                    <option value="900">15 min</option>
+                    <option value="1800">30 min</option>
+                    <option value="2700">45 min</option>
+                    <option value="3600">1:00h</option>
+                    <option value="7200">2:00h</option>
+                    <option value="10800">3:00h</option>
+                    <option value="14400">4:00h</option>
+                </select>
+            </label>
+            <span id="timer" class="obs positive"></span>
+            <span class="obs">Repeated sound will only play between 7am and 9pm</span>
+        </section>
+    </main>
+    <script src="src/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #FEFBEF;
+  font-family: roboto, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 100vw;v
+}
+
+main {
+  text-align: center;
+  padding: 20px;
+}
+
+.buttonWrapper {
+  display: block;
+  margin: 30vh auto 0;
+  position: relative;
+  text-align: center;
+}
+
+.buttonAction {
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  height: 80px;
+  outline: none;
+  position: relative;
+  width: 80px;
+}
+
+.buttonAction::before,
+.buttonAction::after {
+  border-radius: inherit;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  
+}
+.buttonAction::before {
+  background-color: #FF4136;
+  border: 1px solid #CC332B;
+  box-shadow: 0px 10px 0px #CC332B;
+  color: #CC332B;
+  text-shadow: #ad221d 1px 1px 0;
+  content: 'Play';
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 80px;
+  transform: scaleX(1.25);
+  transition: all 0.3s;
+  top: 0;
+  z-index: 10;
+}
+
+.buttonAction::after {
+  background-color: #CC332B;
+  content: '';
+  position: absolute;
+  top: 25%;
+  transform: scaleX(1.275) translate(1%, -1%);
+  border-bottom: 1px solid #ad221d;
+  z-index: 5;
+}
+
+.buttonBase::after {
+  background-color: #CCCCCC;
+  border-radius: 50%;
+  box-shadow: 0px 7px 0px #808080;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 35%;
+  transform: scaleX(1.5) scaleY(1.15) translateY(-5%);
+  width: 100%;
+  z-index: -1;
+}
+
+.buttonAction:hover::before {
+  background-color: ##e4372d;
+  transform: scaleX(1.25) translateY(5%);
+}
+
+.buttonAction:active::before {
+  background-color: ##e4372d;
+  transform: scaleX(1.25) translateY(10%);
+}
+
+.controlsWrapper {
+  margin: 70px auto;
+}
+
+.controlsWrapper label {
+  display: block;
+}
+
+.obs {
+  display: block;
+  padding: 10px 20px;
+  font-size: 12px;
+  color: red;
+}
+
+
+.positive {
+  color: #7d7d76;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.positive strong {
+  font-size: 18px;
+}
